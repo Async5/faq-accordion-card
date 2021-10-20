@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.75rem;
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: linear-gradient(to bottom, $soft-violet, $soft-blue);
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: $very-dark-desaturated-blue;
+  text-align: center;
+  margin-bottom: 2.125rem;
+
+  @include breakpoint-up('lg') {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  color: $very-dark-grayish-blue;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 1.125rem 0;
+
+  &:hover {
+    color: $soft-red;
+  }
+}
+
+p {
+  color: $dark-grayish-blue;
+  padding-bottom: 1.375rem;
+  width: 90%;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down('lg') {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up('lg') {
+    display: none;
+  }
+}

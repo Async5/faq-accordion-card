@@ -1,0 +1,121 @@
+.main {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    max-width: 31.25rem;
+    min-height: 33.4375rem;
+    width: calc(100% - 1.5625rem * 2);
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow: rgba(70, 77, 83, 0.2) 0px 8px 24px;
+
+    @include breakpoint-up('lg') {
+      max-width: 57.4375rem;
+      min-height: 31.8125rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    &__image {
+      position: relative;
+      height: 8.125rem;
+      background-image: url('../../app/images/bg-pattern-mobile.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+
+      @include breakpoint-up('lg') {
+        height: unset;
+        background-image: url('../../app/images/bg-pattern-desktop.svg');
+        background-position: 112% 69%;
+      }
+
+      .box {
+        position: absolute;
+        top: 41%;
+        left: -20%;
+        z-index: 1;
+      }
+
+      .woman {
+        height: 100%;
+        position: absolute;
+
+        @include breakpoint-down('lg') {
+          left: 50%;
+          top: -6.75rem;
+          transform: translateX(-50%);
+        }
+
+        @include breakpoint-up('lg') {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+        }
+
+        img {
+          width: 14.8125rem;
+
+          @include breakpoint-up('md') {
+            width: 100%;
+            height: auto;
+          }
+
+          @include breakpoint-up('lg') {
+            position: relative;
+            left: -15%;
+          }
+        }
+      }
+    }
+
+    &__text {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+
+      div {
+        @include breakpoint-up('lg') {
+          width: 21.875rem;
+        }
+
+        margin: 0 auto;
+      }
+
+      @include breakpoint-up('lg') {
+        padding: 5.875rem 5.875rem 5.875rem 0rem;
+      }
+
+      .accordion {
+        &-item {
+          border-bottom: 1px solid $light-grayish-blue;
+
+          h2 {
+            img {
+              transition: all 200ms ease-in-out;
+            }
+          }
+
+          &.openned {
+            h2 {
+              font-weight: 700;
+              color: $very-dark-desaturated-blue;
+              img {
+                transform: rotateZ(180deg);
+              }
+            }
+          }
+        }
+
+        &-collapse {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.35s ease;
+        }
+      }
+    }
+  }
+}

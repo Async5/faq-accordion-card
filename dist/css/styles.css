@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.75rem;
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ac63e9), to(#6565e7));
+  background: linear-gradient(to bottom, #ac63e9, #6565e7);
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1d1e35;
+  text-align: center;
+  margin-bottom: 2.125rem;
+}
+
+@media screen and (min-width: 60rem) {
+  h1 {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  color: #4a4b5e;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 1.125rem 0;
+}
+
+h2:hover {
+  color: #f47c57;
+}
+
+p {
+  color: #787887;
+  padding-bottom: 1.375rem;
+  width: 90%;
+}
+
+@media screen and (max-width: 60rem) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .card {
+  max-width: 31.25rem;
+  min-height: 33.4375rem;
+  width: calc(100% - 1.5625rem * 2);
+  background-color: white;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: rgba(70, 77, 83, 0.2) 0px 8px 24px;
+          box-shadow: rgba(70, 77, 83, 0.2) 0px 8px 24px;
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card {
+    max-width: 57.4375rem;
+    min-height: 31.8125rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+}
+
+.main .card__image {
+  position: relative;
+  height: 8.125rem;
+  background-image: url("../../app/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card__image {
+    height: unset;
+    background-image: url("../../app/images/bg-pattern-desktop.svg");
+    background-position: 112% 69%;
+  }
+}
+
+.main .card__image .box {
+  position: absolute;
+  top: 41%;
+  left: -20%;
+  z-index: 1;
+}
+
+.main .card__image .woman {
+  height: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 60rem) {
+  .main .card__image .woman {
+    left: 50%;
+    top: -6.75rem;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card__image .woman {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+}
+
+.main .card__image .woman img {
+  width: 14.8125rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .main .card__image .woman img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card__image .woman img {
+    position: relative;
+    left: -15%;
+  }
+}
+
+.main .card__text {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.main .card__text div {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card__text div {
+    width: 21.875rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .main .card__text {
+    padding: 5.875rem 5.875rem 5.875rem 0rem;
+  }
+}
+
+.main .card__text .accordion-item {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.main .card__text .accordion-item h2 img {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.main .card__text .accordion-item.openned h2 {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.main .card__text .accordion-item.openned h2 img {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.main .card__text .accordion-collapse {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+/*# sourceMappingURL=styles.css.map */
