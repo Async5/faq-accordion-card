@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion card solution
 
-![Design](./design/desktop.preview.jpg)
+![Design](./design/desktop-preview.jpg)
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/faq-accordion-card-with-htmlscssjavascript-Owi3t9KlO)
 - Live Site URL: [live site URL here](https://serene-fermat-3f70d8.netlify.app/)
 
 ## My process
